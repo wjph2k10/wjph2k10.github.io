@@ -1,52 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-  
-<center><h1 style="font-family: Arial" id="dateText1"></h1></center>
-<center><h1 id="dateText2"></h1></center>
-
-<center>
-  <img 
-    id="birthdayGif"
-    src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3YxaHd0Y3JkeGcwNHNvOHNtdmRycGp3anY1cWI3eHl0bnZvcnV2eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ju7l5y9osyymQ/giphy.gif"
-    width="250"
-    style="display:none;"
-  />
-</center>
-
- <style>
-body {
-  background-image: url('spowey.png');
-}
-</style> 
-  
-<script>
-  // Get the current date
-  const today = new Date();
-
-  // Define the cutoff date (6th October 2025, midnight)
-  const cutoff = new Date('2025-10-31T00:00:00');
-
-  // Check if it's before the cutoff date
-  const isBefore = today < cutoff;
-
-  // Set the text based on whether it's before or after the date
-  const line1 = isBefore
-    ? "Its not halloween yet"
-    : "You checked this on halloween :D";
-
-  const line2 = isBefore
-    ? "Come back on halloween!"
-    : "Happy halloween (and survive your cousin) ;)!";
-
-  // Update page content
-  document.getElementById("dateText1").textContent = line1;
-  document.getElementById("dateText2").textContent = line2;
-
-  // Show or hide the GIF depending on the date
-  const gif = document.getElementById("birthdayGif");
-  gif.style.display = isBefore ? "none" : "inline";
-</script>
 
 </body>
 </html>
