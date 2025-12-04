@@ -19,3 +19,40 @@ Retrieved 2025-12-03, License - CC BY-SA 4.0
 	<center><a href="https://discord.gg/uXTQDebhGN"><img src="images/discord_button.webp"></a><a href="https://modrinth.com/user/Wjph2"><img src="images/modrinth_button.webp"></a></center>
 		
 </body>
+
+
+<h2>Total Views: <span id="viewCount">Loading...</span></h2>
+
+<script>
+const BIN_ID = "YOUR_BIN_ID";
+const API_KEY = "YOUR_API_KEY";
+
+async function updateViewCount() {
+    // Fetch current count
+    const getRes = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+        headers: {
+            "X-Master-Key": API_KEY
+        }
+    });
+    const data = await getRes.json();
+    let views = data.record.views;
+
+    // Increment
+    views++;
+
+    // Update the bin
+    await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            "X-Master-Key": API_KEY
+        },
+        body: JSON.stringify({ views })
+    });
+
+    // Update page
+    document.getElementById("viewCount").textContent = views;
+}
+
+updateViewCount();
+</script>
