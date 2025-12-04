@@ -24,12 +24,12 @@ Retrieved 2025-12-03, License - CC BY-SA 4.0
 <h2>Total Views: <span id="viewCount">Loading...</span></h2>
 
 <script>
-const BIN_ID = "YOUR_BIN_ID";
-const API_KEY = "YOUR_API_KEY";
+const BIN_ID = "https://api.jsonbin.io/v3/qs/69316a04d0ea881f401246f0";
+const API_KEY = "";
 
 async function updateViewCount() {
     // Fetch current count
-    const getRes = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+    const getRes = await fetch(`${BIN_ID}`, {
         headers: {
             "X-Master-Key": API_KEY
         }
