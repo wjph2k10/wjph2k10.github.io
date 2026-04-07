@@ -1,0 +1,1 @@
+My own personally usage for things like html and possibly somewhere for all my project to go
