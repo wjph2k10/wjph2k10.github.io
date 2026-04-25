@@ -3,23 +3,27 @@
 	<link rel="icon" href="/images/favicon.webp">
 	<style>
 	.body {
-		font-family: "Comic Sans MS", "Comic Sans";
-		text-align: center;
-		color: white;
-		background-image: linear-gradient(to bottom right, rgb(187, 0, 0), rgb(127, 0, 255));
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
-		min-height: 100dvh;
+  		font-family: "Comic Sans MS", "Comic Sans";
+  		text-align: center;
+  		color: white;
+  		background-image: linear-gradient(to bottom right, rgb(187, 0, 0), rgb(127, 0, 255));
+  		background-repeat: no-repeat;
+  		background-position: center;
+  		background-size: cover;
+  		min-height: 100dvh;
 	}
 
+	/* Desktop */
 	.img {
-		width: 13%;
-		height: auto;
+  		width: 200px;
+  		height: auto;
 	}
+
+	/* Mobile */
 	@media (max-width: 768px) {
   		.img {
-    		width: 300%;
+    	width: 80%;   /* fills most of the screen nicely */
+    	max-width: 400px;
   		}
 	}
 
